@@ -8,6 +8,11 @@ namespace Laboratory_1
     {
         public App()
         {
+            Device.SetFlags(new[]
+{
+                "RadioButton_Experimental",
+            });
+
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());

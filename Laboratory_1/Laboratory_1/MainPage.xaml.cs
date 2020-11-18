@@ -15,31 +15,34 @@ namespace Laboratory_1
             InitializeComponent();
         }
 
+        Person person;
         private async void Button_OK(object sender, EventArgs e)
         {
             string firstName = FirstName.Text;
             string surName = SurName.Text;
-            string gender = Gender.Text;
             string age = Age.Text;
 
             Person.Gender genderC;
 
-            if(gender == "Male")
+            if(MaleButton.IsChecked == true)
             {
                 genderC = Person.Gender.Male;
             }
-            else
+            else if(FemaleButton.IsChecked == true)
             {
                 genderC = Person.Gender.Female;
             }
+            else
+            {
+                genderC = Person.Gender.NotSpecified;
+            }
 
-            Person person = new Person(firstName, surName, genderC, age);
+            person = new Person(firstName, surName, genderC, age);
 
             await Navigation.PushAsync(new PersonPage(person));
 
             FirstName.Text = "";
             SurName.Text = "";
-            Gender.Text = "";
             Age.Text = "";
         }
 

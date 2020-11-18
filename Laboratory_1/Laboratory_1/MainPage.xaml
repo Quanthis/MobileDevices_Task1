@@ -27,9 +27,11 @@
 
         <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
 
-            <Label Text="Enter you Gender:" />
+            <Label Text="Select you Gender:" />
 
-            <Entry Text="" x:Name="Gender" WidthRequest="100" />
+            <RadioButton Text="Male" x:Name="MaleButton"/>
+
+            <RadioButton Text="Female" x:Name="FemaleButton"/>
 
         </StackLayout>
 
