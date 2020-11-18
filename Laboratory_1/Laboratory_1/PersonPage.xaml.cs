@@ -42,7 +42,7 @@ namespace Laboratory_1
             PersonData[0] = new Label { Text = "Name: " + person.GetName() };
             PersonData[1] = new Label { Text = "Surname: " + person.GetSurname() };
             PersonData[2] = new Label { Text = "Gender: " + person.GetGenderInString() };
-            PersonData[3] = new Label { Text = "Age" + person.GetAge() };
+            PersonData[3] = new Label { Text = "Age: " + person.GetAge() };
 
             foreach(var item in PersonData)
             {

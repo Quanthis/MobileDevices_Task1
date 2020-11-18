@@ -36,6 +36,11 @@ namespace Laboratory_1
             Person person = new Person(firstName, surName, genderC, age);
 
             await Navigation.PushAsync(new PersonPage(person));
+
+            FirstName.Text = "";
+            SurName.Text = "";
+            Gender.Text = "";
+            Age.Text = "";
         }
 
     }
